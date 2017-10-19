@@ -13,9 +13,11 @@ build:
   script: python -m pip install --no-deps .
 
 requirements:
-  build:
+  host:
     - python
     - pip
+  build:
+    - {{ compiler('c') }}
   run:
     - python
 
