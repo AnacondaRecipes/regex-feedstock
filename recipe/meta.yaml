@@ -19,19 +19,28 @@ requirements:
   host:
     - python
     - pip
+    - wheel
+    - setuptools
   run:
     - python
 
 test:
   imports:
     - regex
+  requires:
+    - pip
+  commands:
+    - pip check
+
 
 about:
   home: https://bitbucket.org/mrabarnett/mrab-regex
-  # https://bitbucket.org/mrabarnett/mrab-regex/issues/124/please-add-a-license-file-to-the-package
-  license: Python-2.0
-  license_family: PSF
+  license: Apache 2.0
+  license_family: Apache
+  license_file: LICENSE.txt
   summary: Alternative regular expression module, to replace re
+  doc_url: https://bitbucket.org/mrabarnett/mrab-regex/src/hg/docs/Features.rst
+  dev_url: https://bitbucket.org/mrabarnett/mrab-regex/src/hg/
 
 extra:
   recipe-maintainers:
