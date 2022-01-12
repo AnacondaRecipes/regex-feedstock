@@ -1,4 +1,4 @@
-{% set version = "2021.8.3" %}
+{% set version = "2021.11.2" %}
 
 package:
   name: regex
@@ -6,11 +6,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/r/regex/regex-{{ version }}.tar.gz
-  sha256: 8935937dad2c9b369c3d932b0edbc52a62647c2afb2fafc0c280f14a8bf56a6a
+  sha256: 5e85dcfc5d0f374955015ae12c08365b565c6f1eaf36dd182476a4d8e5a1cdb7
 
 build:
   number: 0
-  skip: true  # [win and py27]
+  # the minimal version of python supported is python 3.6
+  skip: true  # [py<36]
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
@@ -35,7 +36,7 @@ test:
 
 about:
   home: https://bitbucket.org/mrabarnett/mrab-regex
-  license: Apache 2.0
+  license: Apache-2.0
   license_family: Apache
   license_file: LICENSE.txt
   summary: Alternative regular expression module, to replace re
