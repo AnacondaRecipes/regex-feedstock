@@ -10,7 +10,8 @@ source:
 
 build:
   number: 0
-  skip: true  # [win and py27]
+  # the minimal version of python supported is python 3.6
+  skip: true  # [py<36]
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
