@@ -35,7 +35,7 @@ test:
 
 about:
   home: https://bitbucket.org/mrabarnett/mrab-regex
-  license: Apache 2.0
+  license: Apache-2.0
   license_family: Apache
   license_file: LICENSE.txt
   summary: Alternative regular expression module, to replace re
