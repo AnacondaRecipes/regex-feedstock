@@ -33,15 +33,14 @@ test:
   commands:
     - pip check
 
-
 about:
-  home: https://bitbucket.org/mrabarnett/mrab-regex
+  home: https://github.com/mrabarnett/mrab-regex
   license: Apache-2.0
   license_family: Apache
   license_file: LICENSE.txt
   summary: Alternative regular expression module, to replace re
-  doc_url: https://bitbucket.org/mrabarnett/mrab-regex/src/hg/docs/Features.rst
-  dev_url: https://bitbucket.org/mrabarnett/mrab-regex/src/hg/
+  doc_url: https://github.com/mrabarnett/mrab-regex/blob/hg/README.rst
+  dev_url: https://github.com/mrabarnett/mrab-regex
 
 extra:
   recipe-maintainers:
