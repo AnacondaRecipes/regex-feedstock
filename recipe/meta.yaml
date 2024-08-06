@@ -1,5 +1,5 @@
 {% set name = "regex" %}
-{% set version = "2023.10.3" %}
+{% set version = "2024.7.24" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 3fef4f844d2290ee0ba57addcec17eec9e3df73f10a2748485dfd6a3a188cc0f
+  sha256: 9cfd009eed1a46b27c14039ad5bbc5e71b6367c5b2e6d5f5da0ea91600817506
 
 build:
   number: 0
@@ -42,7 +42,7 @@ about:
   license_file: LICENSE.txt
   summary: Alternative regular expression module, to replace re
   description: |
-    This regex implementation is backwards-compatible with the standard 're' module, 
+    This regex implementation is backwards-compatible with the standard 're' module,
     but offers additional functionality.
   doc_url: https://github.com/mrabarnett/mrab-regex/blob/hg/README.rst
   dev_url: https://github.com/mrabarnett/mrab-regex
