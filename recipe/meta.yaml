@@ -11,8 +11,7 @@ source:
 
 build:
   number: 0
-  # the minimal version of python supported is python 3.7
-  skip: true  # [py<37]
+  skip: true  # [py<38]
   script: {{ PYTHON }} -m pip install . --no-deps --no-build-isolation -vv
 
 requirements:
@@ -29,6 +28,9 @@ requirements:
 test:
   imports:
     - regex
+    - regex.regex
+    - regex._regex_core
+    - regex.test_regex
   requires:
     - pip
   commands:
@@ -42,8 +44,7 @@ about:
   license_file: LICENSE.txt
   summary: Alternative regular expression module, to replace re
   description: |
-    This regex implementation is backwards-compatible with the standard 're' module,
-    but offers additional functionality.
+    This regex implementation is backwards-compatible with the standard 're' module, but offers additional functionality.
   doc_url: https://github.com/mrabarnett/mrab-regex/blob/hg/README.rst
   dev_url: https://github.com/mrabarnett/mrab-regex
 
