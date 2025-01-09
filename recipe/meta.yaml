@@ -1,5 +1,5 @@
 {% set name = "regex" %}
-{% set version = "2024.9.11" %}
+{% set version = "2024.11.6" %}
 
 package:
   name: {{ name|lower }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 6c188c307e8433bcb63dc1915022deb553b4203a70722fc542c363bf120a01fd
+  sha256: 7ab159b063c52a0333c884e4679f8d7a85112ee3078fe3d9004b2dd875585519
 
 build:
-  number: 1
+  number: 0
   skip: true  # [py<38]
   script: {{ PYTHON }} -m pip install . --no-deps --no-build-isolation -vv
 
