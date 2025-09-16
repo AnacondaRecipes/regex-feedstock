@@ -1,17 +1,17 @@
 {% set name = "regex" %}
-{% set version = "2024.11.6" %}
+{% set version = "2025.9.1" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 7ab159b063c52a0333c884e4679f8d7a85112ee3078fe3d9004b2dd875585519
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 88ac07b38d20b54d79e704e38aa3bd2c0f8027432164226bdee201a1c0c9c9ff
 
 build:
   number: 0
-  skip: true  # [py<38]
+  skip: true  # [py<39]
   script: {{ PYTHON }} -m pip install . --no-deps --no-build-isolation -vv
 
 requirements:
@@ -20,8 +20,7 @@ requirements:
   host:
     - python
     - pip
-    - wheel
-    - setuptools
+    - setuptools >77.0.3
   run:
     - python
 
