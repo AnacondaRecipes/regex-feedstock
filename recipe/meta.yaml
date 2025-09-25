@@ -16,10 +16,11 @@ build:
 
 requirements:
   build:
+    - {{ stdlib('c') }}
     - {{ compiler('c') }}
   host:
-    - python
     - pip
+    - python
     - setuptools >77.0.3
   run:
     - python
