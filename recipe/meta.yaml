@@ -28,14 +28,13 @@ requirements:
 test:
   imports:
     - regex
-    - regex.regex
     - regex._regex_core
-    - regex.test_regex
+    - regex.tests.test_regex
   requires:
     - pip
   commands:
     - pip check
-    - python -m unittest -v regex.test_regex
+    - python -m unittest -v regex.tests.test_regex
 
 about:
   home: https://github.com/mrabarnett/mrab-regex
