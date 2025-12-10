@@ -1,5 +1,5 @@
 {% set name = "regex" %}
-{% set version = "2025.9.1" %}
+{% set version = "2025.11.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 88ac07b38d20b54d79e704e38aa3bd2c0f8027432164226bdee201a1c0c9c9ff
+  sha256: 1fedc720f9bb2494ce31a58a1631f9c82df6a09b49c19517ea5cc280b4541e01
 
 build:
   number: 0
@@ -28,14 +28,13 @@ requirements:
 test:
   imports:
     - regex
-    - regex.regex
     - regex._regex_core
-    - regex.test_regex
+    - regex.tests.test_regex
   requires:
     - pip
   commands:
     - pip check
-    - python -m unittest -v regex.test_regex
+    - python -m unittest -v regex.tests.test_regex
 
 about:
   home: https://github.com/mrabarnett/mrab-regex
