@@ -2,7 +2,7 @@
 {% set version = "2026.7.19" %}
 
 package:
-  name: {{ name|lower }}
+  name: {{ name }}
   version: {{ version }}
 
 source:
@@ -34,7 +34,7 @@ test:
     - pip
   commands:
     - pip check
-    - python -m unittest -v regex.tests.test_regex
+    - python -m unittest -vv regex.tests.test_regex
 
 about:
   home: https://github.com/mrabarnett/mrab-regex
