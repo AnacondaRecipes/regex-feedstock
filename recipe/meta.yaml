@@ -41,7 +41,7 @@ about:
   license: Apache-2.0 AND CNRI-Python
   license_family: Other
   license_file: LICENSE.txt
-  summary: Alternative regular expression module, to replace re
+  summary: Alternative regular expression module, to replace `re`.
   description: |
     This regex implementation is backwards-compatible with the standard 're' module, but offers additional functionality.
   doc_url: https://github.com/mrabarnett/mrab-regex/blob/hg/README.rst
